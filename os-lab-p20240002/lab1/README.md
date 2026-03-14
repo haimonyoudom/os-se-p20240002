@@ -8,21 +8,27 @@
 
 Briefly describe what you observed about your OS and Kernel here.
 
-<!-- Insert your screenshot for Task 1 below: -->
-<!-- SCREENSHOT REQUIREMENT: Show the terminal after running uname -a and lsb_release -a, or the contents of your task1_os_info.txt file. -->
 why in the file task1 and my screenshot wrong becoz first i use wsl and now i use dual-boot ubuntu 
 we can see kernal is after zephyrus 
+<!-- Insert your screenshot for Task 1 below: -->
+<!-- SCREENSHOT REQUIREMENT: Show the terminal after running uname -a and lsb_release -a, or the contents of your task1_os_info.txt file. -->
+
 ![alt text](../lab1/pictures/task1.png)
 ---
 
 ## Task 2: Essential Linux File and Directory Commands
 
 Briefly describe your experience creating, moving, and deleting files.
+
 I using command such as :
  1.create file : touch file 
+
  2.create and write file : nano file
+
  3.moving file to other folder : mv file folder
+
  4.rename file " mv file new-name-file
+
  5.delete file :rm file
 <!-- Insert your screenshot for Task 2 below: -->
 <!-- SCREENSHOT REQUIREMENT: Show the terminal running the file manipulation commands (mkdir, touch, cp, mv, rm) or the final cat of your task2_file_commands.txt file. -->
@@ -36,6 +42,7 @@ I using command such as :
 Explain the difference you observed between `remove` and `purge`.
 
 remove : removes the installed program but keeps its configuration files
+
 purge : removes the installed program and configuration files
 <!-- Insert your screenshot for Task 3 below: -->
 <!-- SCREENSHOT REQUIREMENT: Show the output of ls -ld /etc/mc after running apt-get remove (folder still exists) versus after running apt-get purge (folder is gone). -->
