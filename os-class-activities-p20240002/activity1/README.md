@@ -42,19 +42,32 @@ Screenshot of running `copyfilesyscall.c` on Linux:
 
 1. **What flags did you pass to `open()`? What does each flag mean?**
 
-   > [Your answer]
+   **Flags passed to open():**
+
+   >O_WRONLY — open for writing only
+
+   >O_CREAT — create the file if it doesn't exist
+
+   >O_TRUNC — if the file already exists, erase its contents
 
 2. **What is `0644`? What does each digit represent?**
 
-   > [Your answer]
+   > It's an octal permission value. 0 = octal prefix, 6 = owner (read+write), 4 = group (read only), 4 = others (read only)
 
 3. **What does `fopen("output.txt", "w")` do internally that you had to do manually?**
 
-   > [Your answer]
+   > It calls open() with O_WRONLY | O_CREAT | O_TRUNC and sets up an internal buffer, error flags, and a FILE* struct — all of which you had to handle manually.
 
 ### Part B — File Reader & Display
 
-**Describe your implementation:** [Your notes]
+**Describe your implementation:** 
+>  Open "output.txt" for reading
+
+>  Read content into buffer in a loop
+
+>  Write content to terminal using write()
+
+>  Close the file
 
 **Version A — Library Functions (`file_reader_lib.c`):**
 
@@ -68,17 +81,32 @@ Screenshot of running `copyfilesyscall.c` on Linux:
 
 1. **What does `read()` return? How is this different from `fgets()`?**
 
-   > [Your answer]
+   > read() returns the number of bytes actually read as a raw integer, or 0 at EOF, or -1 on error. fgets() returns a pointer to the buffer on success or NULL on EOF/error — it also stops at newlines automatically.
 
 2. **Why do you need a loop when using `read()`? When does it stop?**
 
-   > [Your answer]
+   > read() may not read the entire file in one call — it reads up to the requested number of bytes. You loop until it returns 0, which means end of file.
 
 ---
 
 ## Task 2: Directory Listing & File Info
 
-**Describe your implementation:** [Your notes]
+**Describe your implementation:** 
+
+   > 1. Open current directory
+   
+   >  2. Print header
+    
+   >  3. Loop through entries
+
+   >  4. Get file info using stat()
+
+   >  5. Format output into buffer
+   
+   >  6. Write to stdout using write()
+   
+   >  7. Close directory
+   
 
 ### Version A — Library Functions (`dir_list_lib.c`)
 
@@ -92,15 +120,22 @@ Screenshot of running `copyfilesyscall.c` on Linux:
 
 1. **What struct does `readdir()` return? What fields does it contain?**
 
-   > [Your answer]
+   **readdir() returns a struct dirent with fields:**
 
+   >d_ino — inode number
+
+   >d_name — filename (as a string)
+
+   >d_type — file type (regular, directory, etc.)
+
+   >d_reclen, d_off — record length and offset
 2. **What information does `stat()` provide beyond file size?**
 
-   > [Your answer]
+   **File permissions, owner UID/GID, inode number, number of hard links, last access/modification/change times, block size and block count**
 
 3. **Why can't you `write()` a number directly — why do you need `snprintf()` first?**
 
-   > [Your answer]
+   **write() sends raw bytes — it doesn't know about integers or formatting. You need snprintf() to convert the number into a human-readable string first, then write those characters.**
 
 ---
 
@@ -114,16 +149,15 @@ Screenshot of running on Windows:
 
 1. **Why does Windows use `HANDLE` instead of integer file descriptors?**
 
-   > [Your answer]
+**HANDLE is an opaque pointer/reference managed by the Windows kernel object system, which supports many object types (files, threads, events, etc.) uniformly. POSIX uses small integers because Unix treats everything as a file with a simple fd table per process.**
 
 2. **What is the Windows equivalent of POSIX `fork()`? Why is it different?**
 
-   > [Your answer]
+**CreateProcess(). It's different because Windows doesn't use copy-on-write process cloning — it always creates a brand new process from a specified executable, rather than duplicating the calling process like fork() does.**
 
 3. **Can you use POSIX calls on Windows?**
 
-   > [Your answer]
-
+   **Not natively. But you can with WSL (Windows Subsystem for Linux), which provides a real Linux kernel, or with Cygwin, which emulates POSIX on top of the Windows API. MinGW provides some POSIX-like functions but not full compatibility.**
 ---
 
 ## Task 3: strace Analysis
@@ -151,7 +185,7 @@ Screenshot of running on Windows:
 ![strace - System call version](screenshots/strace_output_sys.png)
 
 ### strace -c Summary Comparison
-
+> 📸 Screenshot of `strace summary lib and sys`:
 <!-- Screenshot of `strace -c` output for both versions -->
 ![strace summary - Library](screenshots/strace_summary_lib.png)
 ![strace summary - Syscall](screenshots/strace_summary_sys.png)
@@ -160,19 +194,25 @@ Screenshot of running on Windows:
 
 1. **How many system calls does the library version make compared to the system call version?**
 
-   > [Your answer — use the `strace -c` counts]
+   **System call count comparison:**
+>The library version makes significantly more — typically 108 system calls vs. 108 for the syscall version, i think if the file is large lib version fill use syscall larger than syscall version.
 
 2. **What extra system calls appear in the library version? What do they do?**
 
-   > [Your answer — mention `brk`, `mmap`, `fstat`, etc.]
+   **Extra system calls in the library version:**
+    - brk — adjusts the heap for dynamic memory allocation (used by stdio buffering)
+    - mmap — maps shared libraries (like libc) into memory
+    - fstat — checks file metadata for buffering decisions
+    -  openat — opens shared library files during startup
 
 3. **How many `write()` calls does `fprintf()` actually produce?**
 
-   > [Your answer]
+  **Usually just 1 — because fprintf() buffers output internally and flushes it all at once when the buffer is full or the file is closed.**
 
 4. **In your own words, what is the real difference between a library function and a system call?**
 
-   > [Your answer]
+   - system call is a direct request to kernal and faster compare to library function
+   - library function is code that implemted to call syscall .
 
 ---
 
@@ -180,49 +220,60 @@ Screenshot of running on Windows:
 
 ### System Information
 
-> 📸 Screenshot of `uname -a`, `/proc/cpuinfo`, `/proc/meminfo`, `/proc/version`, `/proc/uptime`:
+> 📸 Screenshot of `uname -a`, `/proc/cpuinfo`:
 
-![System Info](screenshots/task4_system_info.png)
-
+![System Info](screenshots/task4_kernal_cpuinfo.png)
+> 📸 Screenshot of  `/proc/meminfo`:
+![System Info](screenshots/task4_memoinfo.png)
+> 📸 Screenshot of `/proc/version`, `/proc/uptime`:
+![System Info](screenshots/task4_version_uptime.png)
 ### Process Information
 
-> 📸 Screenshot of `/proc/self/status`, `/proc/self/maps`, `ps aux`:
+> 📸 Screenshot of `/proc/self/status` :
 
-![Process Info](screenshots/task4_process_info.png)
-
+![Process Info](screenshots/task4_self_status.png)
+> 📸 Screenshot of `/proc/self/maps`:
+![Process Info](screenshots/task4_self_map.png)
+> 📸 Screenshot of `ps aux`:
+![Process Info](screenshots/task4_start_running_process.png)
 ### Kernel Modules
 
-> 📸 Screenshot of `lsmod` and `modinfo`:
+> 📸 Screenshot of `lsmod` :
 
-![Kernel Modules](screenshots/task4_modules.png)
+![Kernel Modules](screenshots/task4_lsmd.png)
+
+> 📸 Screenshot of `modinfo`:
+
+![Kernel Modules](screenshots/task4_modinfo.png)
 
 ### OS Layers Diagram
 
 > 📸 Your diagram of the OS layers, labeled with real data from your system:
 
-![OS Layers Diagram](screenshots/task4_os_layers_diagram.png)
+![OS Layers Diagram](screenshots/task4_os_layers_diagram.svg)
 
 ### Questions
 
 1. **What is `/proc`? Is it a real filesystem on disk?**
 
-   > [Your answer]
+   **It's a virtual filesystem — not stored on disk at all. The kernel generates its content dynamically in memory whenever you read from it. It exposes real-time kernel and process information.**
 
 2. **Monolithic kernel vs. microkernel — which type does Linux use?**
 
-   > [Your answer]
+   **Linux uses a monolithic kernel, meaning most OS services (drivers, filesystem, networking) run in kernel space. However it's modular — lsmod shows loadable kernel modules that can be added/removed at runtime without rebooting.**
 
 3. **What memory regions do you see in `/proc/self/maps`?**
 
-   > [Your answer]
+   **Text segment (executable code), data/BSS segment, heap, stack, memory-mapped files (like libc.so), and the vDSO/vsyscall region for fast kernel calls.**
 
 4. **Break down the kernel version string from `uname -a`.**
 
-   > [Your answer]
+   **Format: Linux <hostname> <kernel-version> <build-info> <arch>**
+   **e.g., 6.5.0-26-generic → 6 = major, 5 = minor, 0 = patch, 26-generic = Ubuntu build variant**
 
 5. **How does `/proc` show that the OS is an intermediary between programs and hardware?**
 
-   > [Your answer]
+   **Programs read /proc files using normal system calls (open, read), but the data comes directly from kernel data structures about hardware (CPU, memory, devices). You never touch hardware directly — the kernel mediates everything and exposes it through this interface.**
 
 ---
 
