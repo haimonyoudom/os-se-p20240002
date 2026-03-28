@@ -1,0 +1,20 @@
+ 2002  cd task3_shm
+ 2003  mkdir task3_shm
+ 2004  cd task3_shm
+ 2005  gcc -o shm-producer shm-producer.c -lrt
+ 2006  gcc -o shm-consumer shm-consumer.c -lrt
+ 2007  ./shm-producer
+ 2008  # Step 2: Run the consumer (reads from shared memory and saves output)
+ 2009  ./shm-consumer > result-shm-ipc.txt
+ 2010  # View the result
+ 2011  cat result-shm-ipc.txt
+ 2012  history
+ 2013  history | tail -n 20 > command_used_shm.txt
+ 2014  cd ../
+ 2015  mkdir task4_mq
+ 2016  cd task4_mq/
+ 2017  gcc -o sender sender.c -lrt
+ 2018  gcc -o receiver receiver.c -lrt
+ 2019  ./sender
+ 2020  ./receiver > result-mq-ipc.txt
+ 2021  history | tail -n 20 > command_used_mq.txt

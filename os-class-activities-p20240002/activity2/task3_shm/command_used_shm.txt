@@ -1,0 +1,18 @@
+ 1994  git status
+ 1995  git add .
+ 1996  git commit -m "change file name lab1"
+ 1997  git push origin main 
+ 1998  ssh ssh2.rathpisey.site
+ 1999  sudo reboot
+ 2000  cd os-se-p20240002/os-class-activities-p20240002/activity2
+ 2001  ls
+ 2002  cd task3_shm
+ 2003  mkdir task3_shm
+ 2004  cd task3_shm
+ 2005  gcc -o shm-producer shm-producer.c -lrt
+ 2006  gcc -o shm-consumer shm-consumer.c -lrt
+ 2007  ./shm-producer
+ 2008  ./shm-consumer > result-shm-ipc.txt 
+ 2009  cat result-shm-ipc.txt
+ 2010  history
+ 2011  history | tail -n 20 > command_used_shm.txt
