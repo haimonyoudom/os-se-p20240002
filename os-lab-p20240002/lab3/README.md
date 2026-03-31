@@ -121,7 +121,7 @@ Show the output of `ls -la /boot/grub/grub.cfg` and `head -5 /boot/grub/grub.cfg
 Show the GRUB menu with your custom color scheme (challenge 3b) and the `grep` output for the root partition UUID (challenge 3c).
 
 <!-- Insert your screenshot below: -->
-![Task 3 Challenge](images/task3_challenge.png)
+![Task 3 Challenge](images/task3_challenge.jpg)
 
 ---
 
