@@ -1,5 +1,13 @@
+
 === warmup permissions ===
 -rwxrwxr-x 1 se-hai-monyoudom se-hai-monyoudom 76 May 23 22:31 /home/se-hai-monyoudom/bin/warmup
 === warmup output ===
 Hello from my first script! My current directory is:
 /home/se-hai-monyoudom/bin
+=======
+]633;E;echo "=== warmup permissions ===";0dd09a63-92d7-41b3-96c3-833073b80a17]633;C=== warmup permissions ===
+-rwxrwxr-x 1 monyoudom monyoudom 76 May 23 21:51 /home/monyoudom/bin/warmup
+=== warmup output ===
+Hello from my first script! My current directory is:
+/home/monyoudom/bin
+>>>>>>> 5088adc (Lab 7: Bash scripting and server automation)

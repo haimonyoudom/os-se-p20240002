@@ -1,0 +1,7 @@
+]633;E;echo "==== PATH ====";0dd09a63-92d7-41b3-96c3-833073b80a17]633;C==== PATH ====
+/home/monyoudom/bin:/home/monyoudom/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/monyoudom/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/home/monyoudom/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/monyoudom/.vscode/extensions/vscjava.vscode-java-debug-0.59.0/bundled/scripts/noConfigScripts
+==== warmup location ====
+/home/monyoudom/bin/warmup
+=== warmup command output ===
+Hello from my first script! My current directory is:
+/home/monyoudom
