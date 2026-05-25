@@ -1,0 +1,6 @@
+=== guestbook permissions ===
+-rw------- 1 se-hai-monyoudom se-hai-monyoudom 41 May 25 22:12 /home/se-hai-monyoudom/guestbook.txt
+=== sign_book permissions ===
+-rwsr-xr-x 1 se-hai-monyoudom se-hai-monyoudom 16096 May 23 22:53 /home/se-hai-monyoudom/bin/sign_book
+=== guestbook contents ===
+Visitor signed: Hello from se-pav-ratana

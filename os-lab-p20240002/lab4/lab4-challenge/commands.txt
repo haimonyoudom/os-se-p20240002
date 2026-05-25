@@ -1,0 +1,6 @@
+ls ~/lab4-challenge/
+cat ~/lab4-challenge/access.log | head -20
+awk '{print $1}' ~/lab4-challenge/access.log | sort | uniq -c | sort -rn | head -5
+grep "10.11.5.161" ~/lab4-challenge/access.log | grep " 403 " | awk '{print $7}'
+grep -c "10.11.5.161" ~/lab4-challenge/access.log
+echo "10.11.5.161|/private/data|4" > ~/lab4-challenge/final_answer.txt

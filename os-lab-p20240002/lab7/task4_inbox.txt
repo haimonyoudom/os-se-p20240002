@@ -1,0 +1,5 @@
+=== inbox permissions ===
+drwx-wx-wx 2 se-hai-monyoudom se-hai-monyoudom 4096 May 23 22:43 /home/se-hai-monyoudom/public_inbox
+=== inbox files as owner ===
+total 0
+-rw-rw-r-- 1 se-hai-monyoudom se-hai-monyoudom 0 May 23 22:43 test_from_ratana.txt

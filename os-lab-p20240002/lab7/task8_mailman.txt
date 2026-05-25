@@ -1,0 +1,5 @@
+=== mailman output ===
+=== my inbox ===
+total 0
+-rw-rw-r-- 1 se-hai-monyoudom se-hai-monyoudom 0 May 23 22:43 test_from_ratana.txt
+=== messages I received ===

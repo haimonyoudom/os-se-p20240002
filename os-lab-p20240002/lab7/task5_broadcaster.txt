@@ -1,0 +1,6 @@
+=== broadcaster script ===
+-rwxrwxr-x 1 se-hai-monyoudom se-hai-monyoudom 331 May 23 22:47 /home/se-hai-monyoudom/bin/broadcaster
+=== outbox permissions ===
+drwxr-xr-x 2 se-hai-monyoudom se-hai-monyoudom 4096 May 23 22:48 /home/se-hai-monyoudom/public_outbox
+=== secret.txt ===
+semaphore - 2026-05-23 22:48:34
