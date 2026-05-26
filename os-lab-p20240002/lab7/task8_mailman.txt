@@ -1,5 +1,16 @@
 === mailman output ===
+Sent message to se-chheng-kimter
+Sent message to se-hai-monyoudom
+Sent message to se-kiv-sovannlyda
+Messages sent: 3
 === my inbox ===
-total 0
--rw-rw-r-- 1 se-hai-monyoudom se-hai-monyoudom 0 May 23 22:43 test_from_ratana.txt
+total 16
+-rw-rw-r-- 1 se-pav-ratana     se-pav-ratana       0 May 26 14:06 hello_from_ratan.txt
+-rw-rw-r-- 1 se-chheng-kimter  se-chheng-kimter  124 May 26 14:11 message_from_se-chheng-kimter.txt
+-rw-rw-r-- 1 se-hai-monyoudom  se-hai-monyoudom  124 May 26 14:27 message_from_se-hai-monyoudom.txt
+-rw-rw-r-- 1 se-kiv-sovannlyda se-kiv-sovannlyda 125 May 26 14:18 message_from_se-kiv-sovannlyda.txt
+-rw-rw-r-- 1 rathpisey         rathpisey           6 May 26 14:13 pisey-message.txt
 === messages I received ===
+Hello se-hai-monyoudom, I am an automated bot written by se-chheng-kimter. I successfully read your secret word: semaphore.
+Hello se-hai-monyoudom, I am an automated bot written by se-hai-monyoudom. I successfully read your secret word: semaphore.
+Hello se-hai-monyoudom, I am an automated bot written by se-kiv-sovannlyda. I successfully read your secret word: semaphore.
