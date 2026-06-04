@@ -1,0 +1,12 @@
+Run 1 final inventory: 90 (Suspicious)
+
+Run 2 final inventory: 92 (Suspicious)
+
+Run 3 final inventory: 76 (Suspicious)
+
+Run 4 final inventory: 82 (Suspicious)
+
+Run 5 final inventory: 80 (Suspicious)
+
+Explanation:
+The expected final inventory is 0 because 50 bots each purchase 2 widgets, resulting in a total purchase of 100 widgets from an inventory of 100. The observed values are suspicious because multiple buy_widget processes run concurrently and access inventory.txt at the same time. Due to operating system process scheduling, several processes read the same inventory value before it is updated, causing lost updates and inconsistent final inventory values. This is a Time-Of-Check to Time-Of-Use (TOC-TOU) race condition.

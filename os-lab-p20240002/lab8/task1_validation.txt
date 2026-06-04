@@ -1,0 +1,6 @@
+=== missing argument test ===
+Usage: buy_widget  
+=== invalid quantity test ===
+Error: quantity must be a positive integer
+=== script permissions ===
+-rwxrwxr-x 1 se-hai-monyoudom se-hai-monyoudom 304 Jun  2 14:22 /home/se-hai-monyoudom/bin/buy_widget

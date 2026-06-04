@@ -1,0 +1,38 @@
+#!/bin/bash
+
+USERNAME="$1"
+QUANTITY="$2"
+
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+inventory_file="$script_dir/inventory.txt"
+sales_log="$script_dir/sales.log"
+lock_file="$script_dir/inventory.lock"
+
+STUDENT_ID="p20240002"
+
+log_transaction() {
+echo "[$STUDENT_ID] [SUCCESS] $USERNAME bought $QUANTITY widgets." >> "$sales_log"
+}
+
+if ! [[ "$QUANTITY" =~ ^[0-9]+$ ]] || [ "$QUANTITY" -le 0 ]; then
+echo "Transaction Failed: Not enough inventory!"
+exit 1
+fi
+
+(
+flock -x 200
+
+CURRENT_INVENTORY=$(cat "$inventory_file")
+
+if [ "$CURRENT_INVENTORY" -ge "$QUANTITY" ]; then
+    NEW_INVENTORY=$((CURRENT_INVENTORY - QUANTITY))
+    echo "$NEW_INVENTORY" > "$inventory_file"
+    log_transaction
+    echo "Transaction Successful!"
+else
+    echo "Transaction Failed: Not enough inventory!"
+fi
+
+
+) 200>"$lock_file"
+

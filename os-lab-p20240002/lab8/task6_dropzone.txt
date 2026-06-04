@@ -1,0 +1,12 @@
+=== drop zone permissions ===
+drwxrwxrwt 2 se-hai-monyoudom se-hai-monyoudom 4096 Jun  4 11:23 /home/se-hai-monyoudom/vendor_reports
+=== drop zone files ===
+total 8
+-rw-rw-r-- 1 se-hai-monyoudom se-hai-monyoudom 27 Jun  4 11:22 my_rules.txt
+-rw-rw-r-- 1 se-pav-ratana    se-pav-ratana    15 Jun  4 11:23 partner_report.txt
+=== partner deletion result ===
+Paste or summarize the Permission denied result here.
+se-hai-monyoudom@itc-se-g2:~$ rm /home/se-pav-ratana/vendor_reports/my_rules.txt
+rm: remove write-protected regular file '/home/se-pav-ratana/vendor_reports/my_rules.txt'? yes
+rm: cannot remove '/home/se-pav-ratana/vendor_reports/my_rules.txt': Operation not permitted
+se-hai-monyoudom@itc-se-g2:~$ {

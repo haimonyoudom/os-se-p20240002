@@ -1,0 +1,21 @@
+=== public api permissions ===
+drwxr-x--x 11 se-hai-monyoudom se-hai-monyoudom 4096 Jun  4 09:41 /home/se-hai-monyoudom
+drwxr-xr-x  2 se-hai-monyoudom se-hai-monyoudom 4096 Jun  4 11:11 /home/se-hai-monyoudom/public_api
+total 12
+-rwxrwxr-x 1 se-hai-monyoudom se-hai-monyoudom  820 Jun  4 09:41 buy_widget
+-rw-rw-rw- 1 se-hai-monyoudom se-hai-monyoudom    0 Jun  4 11:12 inventory.lock
+-rw-rw-rw- 1 se-hai-monyoudom se-hai-monyoudom    2 Jun  4 11:12 inventory.txt
+-rw-rw-rw- 1 se-hai-monyoudom se-hai-monyoudom 3241 Jun  4 11:12 sales.log
+=== inventory ===
+0
+=== red team sales evidence ===
+[p20240002] [SUCCESS] RedTeam_se-pav-ratana_25 bought 2 widgets.
+[p20240002] [SUCCESS] RedTeam_se-pav-ratana_47 bought 2 widgets.
+[p20240002] [SUCCESS] RedTeam_se-pav-ratana_21 bought 2 widgets.
+[p20240002] [SUCCESS] RedTeam_se-pav-ratana_37 bought 2 widgets.
+[p20240002] [SUCCESS] RedTeam_se-pav-ratana_24 bought 2 widgets.
+[p20240002] [SUCCESS] RedTeam_se-pav-ratana_36 bought 2 widgets.
+[p20240002] [SUCCESS] RedTeam_se-pav-ratana_49 bought 2 widgets.
+[p20240002] [SUCCESS] RedTeam_se-pav-ratana_34 bought 2 widgets.
+[p20240002] [SUCCESS] RedTeam_se-pav-ratana_27 bought 2 widgets.
+[p20240002] [SUCCESS] RedTeam_se-pav-ratana_45 bought 2 widgets.
