@@ -1,0 +1,14 @@
+=== teardown script ===
+-rwxrwxr-x 1 se-hai-monyoudom se-hai-monyoudom 334 Jun  9 14:44 /home/se-hai-monyoudom/bin/teardown
+=== process check ===
+se-chhe+  760649  0.0  0.0   6924  3972 pts/34   S+   14:45   0:00 nano /home/se-chheng-sokuntheary/bin/sync_up
+=== final working folder ===
+/home/se-hai-monyoudom/os-lab-deadlock
+/home/se-hai-monyoudom/os-lab-deadlock/public_dr_beta
+/home/se-hai-monyoudom/os-lab-deadlock/public_dr_beta/vault.lock
+/home/se-hai-monyoudom/os-lab-deadlock/vault_alpha
+/home/se-hai-monyoudom/os-lab-deadlock/vault_alpha/README.txt
+/home/se-hai-monyoudom/os-lab-deadlock/vault_alpha/vault.lock
+/home/se-hai-monyoudom/os-lab-deadlock/vault_beta
+/home/se-hai-monyoudom/os-lab-deadlock/vault_beta/README.txt
+/home/se-hai-monyoudom/os-lab-deadlock/vault_beta/vault.lock

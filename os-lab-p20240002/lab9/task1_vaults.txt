@@ -1,0 +1,11 @@
+=== working folder ===
+/home/se-hai-monyoudom/os-lab-deadlock
+=== vault directories ===
+drwxrwxr-x 2 se-hai-monyoudom se-hai-monyoudom 4096 Jun  9 13:21 /home/se-hai-monyoudom/os-lab-deadlock/vault_alpha
+drwxrwxr-x 2 se-hai-monyoudom se-hai-monyoudom 4096 Jun  9 13:21 /home/se-hai-monyoudom/os-lab-deadlock/vault_beta
+=== vault lock files ===
+-rw-rw-r-- 1 se-hai-monyoudom se-hai-monyoudom 0 Jun  9 13:20 /home/se-hai-monyoudom/os-lab-deadlock/vault_alpha/vault.lock
+-rw-rw-r-- 1 se-hai-monyoudom se-hai-monyoudom 0 Jun  9 13:20 /home/se-hai-monyoudom/os-lab-deadlock/vault_beta/vault.lock
+=== vault marker files ===
+Vault Alpha local resource for p20240002
+Vault Beta local resource for p20240002

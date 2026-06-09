@@ -1,0 +1,11 @@
+=== public DR permissions ===
+drwxr-x--x 14 se-hai-monyoudom se-hai-monyoudom 4096 Jun  9 13:18 /home/se-hai-monyoudom
+drwxrwxr-x  5 se-hai-monyoudom se-hai-monyoudom 4096 Jun  9 14:14 /home/se-hai-monyoudom/os-lab-deadlock
+drwxr-xr-x  2 se-hai-monyoudom se-hai-monyoudom 4096 Jun  9 14:14 /home/se-hai-monyoudom/os-lab-deadlock/public_dr_beta
+total 0
+-rw-rw-rw- 1 se-hai-monyoudom se-hai-monyoudom 0 Jun  9 14:21 vault.lock
+=== running cross sync processes ===
+se-hai-+  745750  0.0  0.0   7340  3668 pts/22   S+   14:21   0:00 /bin/bash /home/se-hai-monyoudom/bin/cross_sync_beta
+=== partner role ===
+Partner username: se-pav-ratana
+My role: Player B
