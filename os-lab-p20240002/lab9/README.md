@@ -1,10 +1,10 @@
 # OS Lab 9 Submission - The Quantum Vault Deadlock
 
-- **Student Name:** [Your Name Here]
-- **Student ID:** [Your Student ID Here]
-- **Linux Username:** [Your Linux Username Here]
-- **Partner Username:** [Partner Username Here]
-- **My Role:** [Player A or Player B]
+- **Student Name:** Hai Monyoudom
+- **Student ID:** p20240002
+- **Linux Username:** ratana
+- **Partner Username:** se-pav-ratana
+- **My Role:** PLayer B
 
 ---
 
