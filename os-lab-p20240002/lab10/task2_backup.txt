@@ -1,0 +1,23 @@
+=== backup script permissions ===
+-rwxrwxr-x 1 se-hai-monyoudom se-hai-monyoudom 792 Jun 16 13:20 /home/se-hai-monyoudom/bin/backup_project
+=== archives kept (should be 3) ===
+/home/se-hai-monyoudom/os-lab-automation/backups/project_20260616_132014.tar.gz
+/home/se-hai-monyoudom/os-lab-automation/backups/project_20260616_132013.tar.gz
+/home/se-hai-monyoudom/os-lab-automation/backups/project_20260616_132012.tar.gz
+=== backup log ===
+2026-06-16 13:20:11 | starting backup of /home/se-hai-monyoudom/os-lab-automation/project
+2026-06-16 13:20:11 | created archive /home/se-hai-monyoudom/os-lab-automation/backups/project_20260616_132011.tar.gz
+2026-06-16 13:20:11 | no old archives to prune
+2026-06-16 13:20:11 | backup finished successfully
+2026-06-16 13:20:12 | starting backup of /home/se-hai-monyoudom/os-lab-automation/project
+2026-06-16 13:20:12 | created archive /home/se-hai-monyoudom/os-lab-automation/backups/project_20260616_132012.tar.gz
+2026-06-16 13:20:12 | no old archives to prune
+2026-06-16 13:20:12 | backup finished successfully
+2026-06-16 13:20:13 | starting backup of /home/se-hai-monyoudom/os-lab-automation/project
+2026-06-16 13:20:13 | created archive /home/se-hai-monyoudom/os-lab-automation/backups/project_20260616_132013.tar.gz
+2026-06-16 13:20:13 | no old archives to prune
+2026-06-16 13:20:13 | backup finished successfully
+2026-06-16 13:20:14 | starting backup of /home/se-hai-monyoudom/os-lab-automation/project
+2026-06-16 13:20:14 | created archive /home/se-hai-monyoudom/os-lab-automation/backups/project_20260616_132014.tar.gz
+2026-06-16 13:20:14 | pruned old archive /home/se-hai-monyoudom/os-lab-automation/backups/project_20260616_132011.tar.gz
+2026-06-16 13:20:14 | backup finished successfully

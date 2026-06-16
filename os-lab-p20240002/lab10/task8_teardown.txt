@@ -1,0 +1,32 @@
+=== crontab BEFORE teardown ===
+=== crontab AFTER teardown (only GRADED jobs should remain) ===
+# Lab10 GRADED session job - fires once at 2:30 PM on 2026-06-16 (lab session)
+30 14 16 6 * /home/se-hai-monyoudom/bin/lab_session_job >> /home/se-hai-monyoudom/os-lab-automation/logs/cron_session_job.log 2>&1
+# Lab10 GRADED deadline job - fires once at 2:30 PM on 2026-06-22 (before deadline)
+30 14 22 6 * /home/se-hai-monyoudom/bin/deadline_job >> /home/se-hai-monyoudom/os-lab-automation/logs/cron_deadline_job.log 2>&1
+=== final automation tree ===
+/home/se-hai-monyoudom/os-lab-automation
+/home/se-hai-monyoudom/os-lab-automation/backups
+/home/se-hai-monyoudom/os-lab-automation/backups/project_20260616_132012.tar.gz
+/home/se-hai-monyoudom/os-lab-automation/backups/project_20260616_132013.tar.gz
+/home/se-hai-monyoudom/os-lab-automation/backups/project_20260616_132014.tar.gz
+/home/se-hai-monyoudom/os-lab-automation/cron_tasks
+/home/se-hai-monyoudom/os-lab-automation/cron_tasks/deadline_job.out
+/home/se-hai-monyoudom/os-lab-automation/cron_tasks/session_job.out
+/home/se-hai-monyoudom/os-lab-automation/logs
+/home/se-hai-monyoudom/os-lab-automation/logs/archive
+/home/se-hai-monyoudom/os-lab-automation/logs/automation_demo.log
+/home/se-hai-monyoudom/os-lab-automation/logs/backup_project.log
+/home/se-hai-monyoudom/os-lab-automation/logs/cron_backup.log
+/home/se-hai-monyoudom/os-lab-automation/logs/cron_maintenance.log
+/home/se-hai-monyoudom/os-lab-automation/logs/health_report.log
+/home/se-hai-monyoudom/os-lab-automation/logs/heartbeat.log
+/home/se-hai-monyoudom/os-lab-automation/logs/my_automation.log
+/home/se-hai-monyoudom/os-lab-automation/project
+/home/se-hai-monyoudom/os-lab-automation/project_compressed.tar.gz
+/home/se-hai-monyoudom/os-lab-automation/project/docs
+/home/se-hai-monyoudom/os-lab-automation/project_plain.tar
+/home/se-hai-monyoudom/os-lab-automation/project/README.md
+/home/se-hai-monyoudom/os-lab-automation/project/src
+/home/se-hai-monyoudom/os-lab-automation/restore_demo
+/home/se-hai-monyoudom/os-lab-automation/restore_demo/project

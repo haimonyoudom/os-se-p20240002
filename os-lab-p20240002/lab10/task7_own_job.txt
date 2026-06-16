@@ -1,0 +1,12 @@
+=== my automation script ===
+#!/bin/bash
+set -euo pipefail
+
+base="$HOME/os-lab-automation"
+logfile="$base/logs/my_automation.log"
+
+# TODO: replace the line below with YOUR own automation task.
+echo "$(date '+%Y-%m-%d %H:%M:%S') | free space: $(df -h "$HOME" | awk 'NR==2 {print $4}')" >> "$logfile"
+=== my cron line ===
+=== output produced on schedule ===
+2026-06-16 13:36:20 | free space: 914G

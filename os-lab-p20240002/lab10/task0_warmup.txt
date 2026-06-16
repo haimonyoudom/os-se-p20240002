@@ -1,0 +1,11 @@
+=== script permissions ===
+-rwxrwxr-x 1 se-hai-monyoudom se-hai-monyoudom 405 Jun 16 13:16 /home/se-hai-monyoudom/bin/automation_demo
+=== log contents ===
+2026-06-16 13:16:12 | automation_demo started by user se-hai-monyoudom
+2026-06-16 13:16:12 | working directory is /home/se-hai-monyoudom
+2026-06-16 13:16:12 | home directory is /home/se-hai-monyoudom
+2026-06-16 13:16:12 | automation_demo finished successfully
+2026-06-16 13:16:12 | automation_demo started by user se-hai-monyoudom
+2026-06-16 13:16:12 | working directory is /home/se-hai-monyoudom
+2026-06-16 13:16:12 | home directory is /home/se-hai-monyoudom
+2026-06-16 13:16:12 | automation_demo finished successfully
