@@ -1,5 +1,7 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <pthread.h>
+#include <unistd.h>
 
 #define NUM_THREADS 4
 
@@ -7,6 +9,7 @@ void *worker(void *arg) {
     int id = *(int *)arg;
     int result = id * 10;
     printf("Thread %d: tid=%lu, result=%d\n", id, pthread_self(), result);
+    sleep(5);          // ← stays alive so we can capture it
     int *ret = malloc(sizeof(int));
     *ret = result;
     return ret;

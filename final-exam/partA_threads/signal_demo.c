@@ -8,9 +8,9 @@ void handler(int sig) {
 }
 
 int main() {
-    signal(SIGINT, handler);   // Ctrl+C
-    signal(SIGTERM, handler);  // kill
-    printf("Running. Send SIGINT (Ctrl+C) or SIGTERM to exit.\n");
+    signal(SIGINT, handler);
+    signal(SIGTERM, handler);
+    printf("Running. Press Ctrl+C to exit.\n");
     while (1) {
         printf("looping...\n");
         sleep(1);
