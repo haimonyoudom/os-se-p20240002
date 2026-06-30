@@ -1,0 +1,10 @@
+#!/bin/bash
+STOCK_FILE="$HOME/stock.txt"
+echo 100 > "$STOCK_FILE"
+
+for i in $(seq 1 60); do
+    buy_reactor_core "buyer$i" 1 &
+done
+wait
+
+echo "Final stock: $(cat $STOCK_FILE)"

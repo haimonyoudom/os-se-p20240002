@@ -1,0 +1,4 @@
+=== Patched Runs (with flock) ===
+Run 1: Final stock: 40
+Run 2: Final stock: 40
+Run 3: Final stock: 40

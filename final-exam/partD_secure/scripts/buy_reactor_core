@@ -1,0 +1,30 @@
+#!/bin/bash
+
+STOCK_FILE="$HOME/stock.txt"
+SALES_LOG="$HOME/sales.log"
+LOCK_FILE="$HOME/stock.lock"
+
+buyer="$1"
+qty="$2"
+
+if [[ -z "$buyer" || -z "$qty" || ! "$qty" =~ ^[1-9][0-9]*$ ]]; then
+    echo "Usage: buy_reactor_core <buyer> <quantity>"
+    exit 1
+fi
+
+(
+    flock -x 200
+
+    stock=$(cat "$STOCK_FILE")
+
+    if (( qty > stock )); then
+        echo "$buyer: Not enough stock ($stock left)."
+        exit 1
+    fi
+
+    new_stock=$(( stock - qty ))
+    echo "$new_stock" > "$STOCK_FILE"
+    echo "$(date '+%Y-%m-%d %H:%M:%S') | buyer=$buyer | qty=$qty | remaining=$new_stock | student=p20240002" >> "$SALES_LOG"
+    echo "$buyer bought $qty. Stock: $new_stock"
+
+) 200>"$LOCK_FILE"
