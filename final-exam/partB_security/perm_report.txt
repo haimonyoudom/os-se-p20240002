@@ -1,0 +1,22 @@
+-rw------- 1 monyoudom monyoudom 12 Jun 30 13:28 /home/monyoudom/techcorp/private/secret.txt
+drwx--x--x 2 monyoudom monyoudom 4096 Jun 30 13:28 /home/monyoudom/techcorp/shared
+  File: /home/monyoudom/techcorp/private/secret.txt
+  Size: 12        	Blocks: 8          IO Block: 4096   regular file
+Device: 259,5	Inode: 4099991     Links: 1
+Access: (0600/-rw-------)  Uid: ( 1000/monyoudom)   Gid: ( 1000/monyoudom)
+Access: 2026-06-30 13:28:10.602151378 +0700
+Modify: 2026-06-30 13:28:10.602151378 +0700
+Change: 2026-06-30 13:28:10.603151427 +0700
+ Birth: 2026-06-30 13:28:10.602151378 +0700
+  File: /home/monyoudom/techcorp/shared
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: 259,5	Inode: 4099989     Links: 2
+Access: (0711/drwx--x--x)  Uid: ( 1000/monyoudom)   Gid: ( 1000/monyoudom)
+Access: 2026-06-30 13:28:10.601151329 +0700
+Modify: 2026-06-30 13:28:10.601151329 +0700
+Change: 2026-06-30 13:28:10.605151526 +0700
+ Birth: 2026-06-30 13:28:10.601151329 +0700
+--- Special Bits ---
+drwx--s--t 2 monyoudom monyoudom 4096 Jun 30 13:28 /home/monyoudom/techcorp/shared
+Real UID: 1000
+Effective UID: 1000
