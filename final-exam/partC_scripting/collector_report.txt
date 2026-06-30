@@ -1,0 +1,5 @@
+READ: /home/se-hai-monyoudom/testfiles/readable/file1.txt
+file one content
+READ: /home/se-hai-monyoudom/testfiles/readable/file2.txt
+file two content
+SKIP (unreadable): /home/se-hai-monyoudom/testfiles/mixed/file3.txt

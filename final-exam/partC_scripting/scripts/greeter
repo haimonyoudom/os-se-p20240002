@@ -1,0 +1,13 @@
+#!/bin/bash
+messages=("Stay sharp." "You got this." "Keep pushing.")
+random_msg=${messages[$RANDOM % ${#messages[@]}]}
+current_user=$(whoami)
+logged_in=$(who | wc -l)
+uptime_info=$(uptime -p)
+
+echo "==============================="
+echo "  Welcome, $current_user!"
+echo "  Logged-in users: $logged_in"
+echo "  Uptime: $uptime_info"
+echo "  $random_msg"
+echo "==============================="

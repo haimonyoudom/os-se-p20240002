@@ -1,0 +1,3 @@
+PATH=/home/se-hai-monyoudom/bin:/home/se-hai-monyoudom/bin:/home/se-hai-monyoudom/bin:/home/se-hai-monyoudom/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+/home/se-hai-monyoudom/bin/greeter
+greeter is hashed (/home/se-hai-monyoudom/bin/greeter)

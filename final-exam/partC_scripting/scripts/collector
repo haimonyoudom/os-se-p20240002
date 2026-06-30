@@ -1,0 +1,21 @@
+#!/bin/bash
+dirs=("$HOME/testfiles/readable" "$HOME/testfiles/mixed")
+report="$HOME/os-se-p20240002/final-exam/partC_scripting/collector_report.txt"
+> "$report"
+
+for dir in "${dirs[@]}"; do
+    for file in "$dir"/*; do
+        if [ ! -e "$file" ]; then
+            echo "SKIP (missing): $file" >> "$report"
+            continue
+        fi
+        if [ ! -r "$file" ]; then
+            echo "SKIP (unreadable): $file" >> "$report"
+            continue
+        fi
+        echo "READ: $file" >> "$report"
+        cat "$file" >> "$report"
+    done
+done
+echo "Report written to $report"
+cat "$report"
