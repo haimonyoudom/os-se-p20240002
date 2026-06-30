@@ -1,0 +1,16 @@
+=== crontab -l ===
+# Lab10 GRADED session job - fires once at 2:30 PM on 2026-06-16 (lab session)
+30 14 16 6 * /home/se-hai-monyoudom/bin/lab_session_job >> /home/se-hai-monyoudom/os-lab-automation/logs/cron_session_job.log 2>&1
+# Lab10 GRADED deadline job - fires once at 2:30 PM on 2026-06-22 (before deadline)
+30 14 22 6 * /home/se-hai-monyoudom/bin/deadline_job >> /home/se-hai-monyoudom/os-lab-automation/logs/cron_deadline_job.log 2>&1
+* * * * * $HOME/bin/timed_job $HOME/os-se-p20240002/final-exam/partE_automation/logs/cron_recurring.log
+35 14 * * * $HOME/bin/timed_job $HOME/os-se-p20240002/final-exam/partE_automation/logs/cron_oneshot.log
+*/5 * * * * $HOME/bin/backup_exam
+0 16 * * * $HOME/bin/backup_exam
+=== cron_recurring.log ===
+2026-06-30 13:51:01 — timed_job fired
+2026-06-30 13:52:01 — timed_job fired
+=== cron_oneshot.log ===
+not fired yet
+=== exam-backups listing ===
+total 0

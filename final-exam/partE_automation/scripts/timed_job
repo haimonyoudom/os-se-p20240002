@@ -1,0 +1,3 @@
+#!/bin/bash
+LOGFILE="$1"
+echo "$(date '+%Y-%m-%d %H:%M:%S') — timed_job fired" >> "$LOGFILE"
