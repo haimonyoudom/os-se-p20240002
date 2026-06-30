@@ -1,65 +1,19 @@
-# live_mods.md — Live Modification (curveball) answers
+# Live Modifications
 
-> Released once, late in the exam. **Three curveballs: A, D, E.** For EACH, give: the
-> announced instruction, the exact command(s) you ran, the **live value(s)** you acted
-> on (your PID / stock / timestamp), and the screenshot. An answer that ignores your
-> issued value, or that could have been written *before* the announcement, scores zero.
+## Curveball A — 3 extra workers
+**Issued instruction:** Add 3 extra workers that start only after originals joined; show new LWPs appear then disappear.
+**Live value:** 3 extra workers
+**Commands run:** Edited thread_demo.c to add EXTRA_THREADS=3 block after join loop. Recompiled and ran. Captured ps -eLf showing new LWPs.
+**Screenshot:** partA_threads/images/live_a.png
 
----
+## Curveball D — Purchase cap = 7
+**Issued instruction:** Add per-buyer purchase cap; reject orders above it; re-run swarm.
+**Live value:** cap = 7
+**Commands run:** Added CAP=7 check to buy_reactor_core before flock block. Re-ran swarm with echo 100 > ~/stock.txt then swarm.
+**Screenshot:** partD_secure/images/live_d.png
 
-## Curveball A — extra worker(s) that start after the others join
-
-- **Issued value:** `<N>` extra worker(s)
-- **Announced instruction:** <paste exactly what was announced>
-- **Live value(s) I acted on:** base PID = `<...>`; new LWP id(s) that appeared = `<...>`
-- **Commands:**
-
-```bash
-# edit thread_demo.c to spawn N extra workers only AFTER the originals join
-# recompile, run, and capture the mapping showing the new LWP(s) appear then vanish
-<your commands>
-```
-
-- **Screenshot:**
-
-![A live — new LWP appears then is gone](partA_threads/images/live_a.png)
-
----
-
-## Curveball D — per-buyer purchase cap
-
-- **Issued value:** cap = `<N>`
-- **Announced instruction:** <paste>
-- **Live value(s) I acted on:** stock before = `<...>`; order(s) rejected for exceeding
-  the cap = `<...>`; final stock = `<...>`
-- **Commands:**
-
-```bash
-# add a per-buyer cap to buy_<product>: reject any single order above <N>
-# reset stock, re-run swarm, show it stays consistent AND respects the cap
-<your commands>
-```
-
-- **Screenshot:**
-
-![D live — locked result respects the cap](partD_secure/images/live_d.png)
-
----
-
-## Curveball E — idempotent timed_job
-
-- **Issued value:** token = `<TOKEN>`
-- **Announced instruction:** <paste>
-- **Live value(s) I acted on:** today's marker line = `<...>`; 1st trigger = ran,
-  2nd trigger = skipped
-- **Commands:**
-
-```bash
-# add a guard to timed_job: refuse to run if today's <TOKEN> entry is already in the log
-# trigger it twice and show the 2nd run was skipped
-<your commands>
-```
-
-- **Screenshot:**
-
-![E live — 2nd run skipped](partE_automation/images/live_e.png)
+## Curveball E — Idempotent timed_job with RUNGUARD
+**Issued instruction:** Make timed_job idempotent using marker token RUNGUARD; trigger twice and prove 2nd was skipped.
+**Live value:** token = RUNGUARD
+**Commands run:** Rewrote timed_job to check for RUNGUARD_<date> in logfile before running. Ran timed_job twice, second was skipped.
+**Screenshot:** partE_automation/images/live_e.png

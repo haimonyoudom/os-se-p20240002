@@ -10,7 +10,68 @@
 === cron_recurring.log ===
 2026-06-30 13:51:01 — timed_job fired
 2026-06-30 13:52:01 — timed_job fired
+2026-06-30 13:53:01 — timed_job fired
+2026-06-30 13:54:01 — timed_job fired
+2026-06-30 13:55:01 — timed_job fired
+2026-06-30 13:56:01 — timed_job fired
+2026-06-30 13:57:01 — timed_job fired
+2026-06-30 13:58:01 — timed_job fired
+2026-06-30 13:59:01 — timed_job fired
+2026-06-30 14:00:01 — timed_job fired
+2026-06-30 14:01:01 — timed_job fired
+2026-06-30 14:02:01 — timed_job fired
+2026-06-30 14:03:01 — timed_job fired
+2026-06-30 14:04:01 — timed_job fired
+2026-06-30 14:05:01 — timed_job fired
+2026-06-30 14:06:01 — timed_job fired
+2026-06-30 14:07:01 — timed_job fired
+2026-06-30 14:08:02 — timed_job fired
+2026-06-30 14:09:01 — timed_job fired
+2026-06-30 14:10:01 — timed_job fired
+2026-06-30 14:11:01 — timed_job fired
+2026-06-30 14:12:01 — timed_job fired
+2026-06-30 14:13:01 — timed_job fired
+2026-06-30 14:14:01 — timed_job fired
+2026-06-30 14:15:01 — timed_job fired
+2026-06-30 14:16:01 — timed_job fired
+2026-06-30 14:17:01 — timed_job fired
+2026-06-30 14:18:01 — timed_job fired
+2026-06-30 14:19:01 — timed_job fired
+2026-06-30 14:20:01 — timed_job fired
+2026-06-30 14:21:01 — timed_job fired
+2026-06-30 14:22:01 — timed_job fired
+2026-06-30 14:23:01 — timed_job fired
+2026-06-30 14:24:01 — timed_job fired
+2026-06-30 14:25:01 — timed_job fired
+2026-06-30 14:26:01 — timed_job fired
+2026-06-30 14:27:01 — timed_job fired
+2026-06-30 14:28:01 — timed_job fired
+2026-06-30 14:29:01 — timed_job fired
+2026-06-30 14:30:01 — timed_job fired
+2026-06-30 14:31:01 — timed_job fired
+2026-06-30 14:32:01 — timed_job fired
+2026-06-30 14:33:01 — timed_job fired
+2026-06-30 14:34:01 — timed_job fired
+2026-06-30 14:35:01 — timed_job fired
+2026-06-30 14:36:01 — timed_job fired [RUNGUARD_2026-06-30]
+2026-06-30 14:37:01 — timed_job SKIPPED (already ran today, token=RUNGUARD_2026-06-30)
+2026-06-30 14:38:01 — timed_job SKIPPED (already ran today, token=RUNGUARD_2026-06-30)
+2026-06-30 14:39:01 — timed_job SKIPPED (already ran today, token=RUNGUARD_2026-06-30)
+2026-06-30 14:40:01 — timed_job SKIPPED (already ran today, token=RUNGUARD_2026-06-30)
+2026-06-30 14:41:01 — timed_job SKIPPED (already ran today, token=RUNGUARD_2026-06-30)
 === cron_oneshot.log ===
-not fired yet
+2026-06-30 14:35:01 — timed_job fired
+2026-06-30 14:35:15 — timed_job fired [RUNGUARD_2026-06-30]
+2026-06-30 14:35:15 — timed_job SKIPPED (already ran today, token=RUNGUARD_2026-06-30)
 === exam-backups listing ===
-total 0
+total 7.1M
+-rw-rw-r-- 1 se-hai-monyoudom se-hai-monyoudom 607K Jun 30 13:55 final-exam-20260630_135501.tar.gz
+-rw-rw-r-- 1 se-hai-monyoudom se-hai-monyoudom 606K Jun 30 14:00 final-exam-20260630_140001.tar.gz
+-rw-rw-r-- 1 se-hai-monyoudom se-hai-monyoudom 606K Jun 30 14:05 final-exam-20260630_140501.tar.gz
+-rw-rw-r-- 1 se-hai-monyoudom se-hai-monyoudom 701K Jun 30 14:10 final-exam-20260630_141001.tar.gz
+-rw-rw-r-- 1 se-hai-monyoudom se-hai-monyoudom 701K Jun 30 14:15 final-exam-20260630_141501.tar.gz
+-rw-rw-r-- 1 se-hai-monyoudom se-hai-monyoudom 701K Jun 30 14:20 final-exam-20260630_142001.tar.gz
+-rw-rw-r-- 1 se-hai-monyoudom se-hai-monyoudom 701K Jun 30 14:25 final-exam-20260630_142501.tar.gz
+-rw-rw-r-- 1 se-hai-monyoudom se-hai-monyoudom 701K Jun 30 14:30 final-exam-20260630_143001.tar.gz
+-rw-rw-r-- 1 se-hai-monyoudom se-hai-monyoudom 701K Jun 30 14:35 final-exam-20260630_143501.tar.gz
+-rw-rw-r-- 1 se-hai-monyoudom se-hai-monyoudom 1.2M Jun 30 14:40 final-exam-20260630_144001.tar.gz

@@ -1,0 +1,3 @@
+2026-06-30 14:35:01 — timed_job fired
+2026-06-30 14:35:15 — timed_job fired [RUNGUARD_2026-06-30]
+2026-06-30 14:35:15 — timed_job SKIPPED (already ran today, token=RUNGUARD_2026-06-30)

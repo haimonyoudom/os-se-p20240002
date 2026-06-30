@@ -1,11 +1,5 @@
-monyoud+    9810    7741    9810  0    5 13:24 pts/1    00:00:00 ./thread_demo
-monyoud+    9810    7741    9812  0    5 13:24 pts/1    00:00:00 ./thread_demo
-monyoud+    9810    7741    9813  0    5 13:24 pts/1    00:00:00 ./thread_demo
-monyoud+    9810    7741    9814  0    5 13:24 pts/1    00:00:00 ./thread_demo
-monyoud+    9810    7741    9815  0    5 13:24 pts/1    00:00:00 ./thread_demo
-
---- Explanation ---
-PID 9810 is shared by all threads (same process).
-LWPs 9810, 9812, 9813, 9814, 9815 are distinct kernel-scheduled entities.
-NLWP=5 confirms 1 main thread + 4 worker threads.
-This proves 1:1 user-to-kernel thread mapping via pthreads on Linux.
+se-hai-+ 1588196 1427661 1588196  0    5 14:32 pts/6    00:00:00 ./thread_demo
+se-hai-+ 1588196 1427661 1588198  0    5 14:32 pts/6    00:00:00 ./thread_demo
+se-hai-+ 1588196 1427661 1588199  0    5 14:32 pts/6    00:00:00 ./thread_demo
+se-hai-+ 1588196 1427661 1588200  0    5 14:32 pts/6    00:00:00 ./thread_demo
+se-hai-+ 1588196 1427661 1588201  0    5 14:32 pts/6    00:00:00 ./thread_demo

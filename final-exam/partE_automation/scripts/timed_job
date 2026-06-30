@@ -1,3 +1,13 @@
 #!/bin/bash
 LOGFILE="$1"
-echo "$(date '+%Y-%m-%d %H:%M:%S') — timed_job fired" >> "$LOGFILE"
+TOKEN="RUNGUARD"
+TODAY=$(date '+%Y-%m-%d')
+MARKER="${TOKEN}_${TODAY}"
+
+# Check if already ran today
+if grep -q "$MARKER" "$LOGFILE" 2>/dev/null; then
+    echo "$(date '+%Y-%m-%d %H:%M:%S') — timed_job SKIPPED (already ran today, token=$MARKER)" >> "$LOGFILE"
+    exit 0
+fi
+
+echo "$(date '+%Y-%m-%d %H:%M:%S') — timed_job fired [$MARKER]" >> "$LOGFILE"
