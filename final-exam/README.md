@@ -1,6 +1,6 @@
 # Final Exam — Se Hai Monyoudom
 
-Student name: Se Hai Monyoudom
+Student name:  Hai Monyoudom
 Student ID: p20240002
 Server username: se-hai-monyoudom
 Exam scenario value (COMPANY / PRODUCT): TechCorp / Reactor Core
