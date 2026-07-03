@@ -1,0 +1,8 @@
+=== apparent size (ls -lh) ===
+-rw-rw-r-- 1 se-hai-monyoudom se-hai-monyoudom 64M Jul  3 21:23 /home/se-hai-monyoudom/os-lab-disk/images/full.img
+-rw-rw-r-- 1 se-hai-monyoudom se-hai-monyoudom 64M Jul  3 21:23 /home/se-hai-monyoudom/os-lab-disk/images/sparse.img
+=== real disk usage (du -h) -> note sparse uses ~0 ===
+0	/home/se-hai-monyoudom/os-lab-disk/images/sparse.img
+64M	/home/se-hai-monyoudom/os-lab-disk/images/full.img
+=== working image created with dd ===
+-rw-rw-r-- 1 se-hai-monyoudom se-hai-monyoudom 64M Jul  3 21:23 /home/se-hai-monyoudom/os-lab-disk/images/scratch.img

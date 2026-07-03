@@ -1,0 +1,44 @@
+=== my disk tool ===
+#!/bin/bash
+set -euo pipefail
+
+base="$HOME/os-lab-disk"
+mkdir -p "$base/logs"
+
+logfile="$base/logs/my_disktool.log"
+target="${1:-$HOME}"
+
+{
+    echo "========================================="
+    echo "Disk Tool Report"
+    echo "Time   : $(date '+%Y-%m-%d %H:%M:%S')"
+    echo "Target : $target"
+    echo "-----------------------------------------"
+    echo "Top 10 Largest Files"
+    echo
+
+    find "$target" -type f -exec du -h {} + 2>/dev/null \
+        | sort -hr \
+        | head -10
+
+    echo
+} >> "$logfile"
+
+=== output it produced ===
+=========================================
+Disk Tool Report
+Time   : 2026-07-03 21:37:18
+Target : /home/se-hai-monyoudom
+-----------------------------------------
+Top 10 Largest Files
+
+64M	/home/se-hai-monyoudom/os-lab-disk/images/full.img
+20M	/home/se-hai-monyoudom/os-se-p20240002/.git/objects/pack/pack-36cd875546f372b3f95ccf8896a2801bba51c9e7.pack
+8.0M	/home/se-hai-monyoudom/os-lab-disk/sample/data/blob.bin
+4.2M	/home/se-hai-monyoudom/os-lab-disk/images/scratch.img
+1.3M	/home/se-hai-monyoudom/os-lab-disk/sample/logs/app.log
+1.2M	/home/se-hai-monyoudom/exam-backups/final-exam-20260630_145001.tar.gz
+1.2M	/home/se-hai-monyoudom/exam-backups/final-exam-20260630_144501.tar.gz
+1.2M	/home/se-hai-monyoudom/exam-backups/final-exam-20260630_144001.tar.gz
+1.1M	/home/se-hai-monyoudom/os-se-p20240002/os-lab-p20240002/lab2/images/full_history.png
+1.1M	/home/se-hai-monyoudom/os-lab-disk/sample/cache/cache.txt

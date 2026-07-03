@@ -1,0 +1,5 @@
+=== state BEFORE teardown ===
+=== images AFTER teardown (should be empty) ===
+total 0
+=== mounts AFTER teardown (should be none) ===
+(no lab mounts remain)

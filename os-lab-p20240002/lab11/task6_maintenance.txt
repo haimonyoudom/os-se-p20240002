@@ -1,0 +1,12 @@
+=== e2fsck (clean check) ===
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+QT_SCRATCH: 11/16384 files (9.1% non-contiguous), 2065/32768 blocks
+=== size after growing to 128M ===
+-rw-rw-r-- 1 se-hai-monyoudom se-hai-monyoudom 128M Jul  3 21:33 /home/se-hai-monyoudom/os-lab-disk/images/scratch.img
+=== block count after resize2fs ===
+Block count:              32768
+Block size:               4096

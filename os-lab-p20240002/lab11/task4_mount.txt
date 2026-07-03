@@ -1,0 +1,8 @@
+=== mount confirmed (findmnt) ===
+=== filesystem usage of the mount (df -hT) ===
+Filesystem                        Type  Size  Used Avail Use% Mounted on
+/dev/mapper/ubuntu--vg-ubuntu--lv ext4 1005G   63G  892G   7% /
+=== files written onto the volume ===
+total 288K
+-rw-rw-r-- 1 se-hai-monyoudom se-hai-monyoudom   34 Jul  3 21:28 hello.txt
+-rw-rw-r-- 1 se-hai-monyoudom se-hai-monyoudom 283K Jul  3 21:28 numbers.txt

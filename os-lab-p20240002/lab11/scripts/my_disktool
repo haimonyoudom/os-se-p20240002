@@ -1,0 +1,24 @@
+#!/bin/bash
+set -euo pipefail
+
+base="$HOME/os-lab-disk"
+mkdir -p "$base/logs"
+
+logfile="$base/logs/my_disktool.log"
+target="${1:-$HOME}"
+
+{
+    echo "========================================="
+    echo "Disk Tool Report"
+    echo "Time   : $(date '+%Y-%m-%d %H:%M:%S')"
+    echo "Target : $target"
+    echo "-----------------------------------------"
+    echo "Top 10 Largest Files"
+    echo
+
+    find "$target" -type f -exec du -h {} + 2>/dev/null \
+        | sort -hr \
+        | head -10
+
+    echo
+} >> "$logfile"

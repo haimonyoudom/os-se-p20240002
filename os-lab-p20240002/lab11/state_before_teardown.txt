@@ -1,0 +1,7 @@
+=== images before teardown ===
+total 69M
+-rw-rw-r-- 1 se-hai-monyoudom se-hai-monyoudom  64M Jul  3 21:23 full.img
+-rw-rw-r-- 1 se-hai-monyoudom se-hai-monyoudom 128M Jul  3 21:33 scratch.img
+-rw-rw-r-- 1 se-hai-monyoudom se-hai-monyoudom  64M Jul  3 21:23 sparse.img
+=== any lab mounts still present? ===
+(none)

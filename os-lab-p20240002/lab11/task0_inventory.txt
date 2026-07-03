@@ -1,0 +1,30 @@
+=== block devices (lsblk -f) ===
+NAME                      FSTYPE      FSVER    LABEL UUID                                   FSAVAIL FSUSE% MOUNTPOINTS
+sda                                                                                                        
+├─sda1                                                                                                     
+├─sda2                    ext4        1.0            9674c81a-5636-4ccb-b182-1e03ee1b03f6      1.6G    10% /boot
+└─sda3                    LVM2_member LVM2 001       2lwknc-rY7z-xBfL-tcfJ-llTD-Q5Ae-MT0RT3                
+  └─ubuntu--vg-ubuntu--lv ext4        1.0            55d121b8-2f63-431c-8011-9197d487f68a    891.7G     6% /
+=== mounted filesystems (df -hT) ===
+Filesystem                        Type   Size  Used Avail Use% Mounted on
+tmpfs                             tmpfs  1.6G  1.3M  1.6G   1% /run
+/dev/mapper/ubuntu--vg-ubuntu--lv ext4  1005G   63G  892G   7% /
+tmpfs                             tmpfs  7.9G     0  7.9G   0% /dev/shm
+tmpfs                             tmpfs  5.0M     0  5.0M   0% /run/lock
+/dev/sda2                         ext4   2.0G  200M  1.6G  11% /boot
+tmpfs                             tmpfs  1.6G  104K  1.6G   1% /run/user/114
+tmpfs                             tmpfs  1.6G  100K  1.6G   1% /run/user/1126
+=== inode usage (df -i) ===
+Filesystem                          Inodes  IUsed    IFree IUse% Mounted on
+tmpfs                              2046950    826  2046124    1% /run
+/dev/mapper/ubuntu--vg-ubuntu--lv 66977792 386014 66591778    1% /
+tmpfs                              2046950      1  2046949    1% /dev/shm
+tmpfs                              2046950      4  2046946    1% /run/lock
+/dev/sda2                           131072    321   130751    1% /boot
+tmpfs                               409390    102   409288    1% /run/user/114
+tmpfs                               409390     85   409305    1% /run/user/1126
+=== filesystem holding HOME ===
+Filesystem                        Type  Size  Used Avail Use% Mounted on
+/dev/mapper/ubuntu--vg-ubuntu--lv ext4 1005G   63G  892G   7% /
+TARGET SOURCE                            FSTYPE OPTIONS
+/      /dev/mapper/ubuntu--vg-ubuntu--lv ext4   rw,relatime

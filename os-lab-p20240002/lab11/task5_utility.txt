@@ -1,0 +1,28 @@
+=== disk_report script permissions ===
+-rwxrwxr-x 1 se-hai-monyoudom se-hai-monyoudom 1114 Jul  3 21:30 /home/se-hai-monyoudom/bin/disk_report
+=== disk_report run on the sample tree ===
+===== QuantumTech disk report at 2026-07-03 21:31:47 =====
+target directory   : /home/se-hai-monyoudom/os-lab-disk/sample
+
+----- mounted filesystems -----
+Filesystem                        Type   Size  Used Avail Use% Mounted on
+tmpfs                             tmpfs  1.6G  1.3M  1.6G   1% /run
+/dev/mapper/ubuntu--vg-ubuntu--lv ext4  1005G   63G  892G   7% /
+tmpfs                             tmpfs  7.9G     0  7.9G   0% /dev/shm
+tmpfs                             tmpfs  5.0M     0  5.0M   0% /run/lock
+/dev/sda2                         ext4   2.0G  200M  1.6G  11% /boot
+tmpfs                             tmpfs  1.6G  104K  1.6G   1% /run/user/114
+tmpfs                             tmpfs  1.6G  100K  1.6G   1% /run/user/1126
+
+----- top 5 directories under target -----
+1.1M	/home/se-hai-monyoudom/os-lab-disk/sample/cache
+1.3M	/home/se-hai-monyoudom/os-lab-disk/sample/logs
+8.1M	/home/se-hai-monyoudom/os-lab-disk/sample/data
+11M	/home/se-hai-monyoudom/os-lab-disk/sample
+
+----- filesystem holding target -----
+Filesystem                         Size  Used Avail Use% Mounted on
+/dev/mapper/ubuntu--vg-ubuntu--lv 1005G   63G  892G   7% /
+
+status: OK - filesystem for /home/se-hai-monyoudom/os-lab-disk/sample is 7% full (below 80%).
+
